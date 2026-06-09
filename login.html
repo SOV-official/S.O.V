@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label>Correo Electrónico</label>
+                <input type="email" placeholder="Ingrese su correo" required>
+            </div>
+
+            <div class="input-group">
+                <label>Contraseña</label>
+                <input type="password" placeholder="Ingrese su contraseña" required>
+            </div>
+
+            <button type="submit" class="btn-login">
+                Ingresar
+            </button>
+
+            <div class="extra-links">
+                <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                <br>
+                <p><a href="#">Crear una cuenta</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "prototipo.html";
+        });
+    </script>
+
+</body>
+</html>

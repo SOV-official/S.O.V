@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Laboratorio o Taller</title>
+    <link rel="stylesheet" href="plantilla.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Registro de Laboratorio o Taller</h1>
+
+        <form>
+
+            <label for="laboratorio">Laboratorio o Taller</label>
+            <input type="text" id="laboratorio" name="laboratorio">
+
+            <label for="asignatura">Asignatura</label>
+            <input type="text" id="asignatura" name="asignatura">
+
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha">
+
+            <label for="docente">Docente</label>
+            <input type="text" id="docente" name="docente">
+
+            <label for="horaSalida">Hora de Salida</label>
+            <input type="time" id="horaSalida" name="horaSalida">
+
+            <label for="grupo">Grupo</label>
+            <input type="text" id="grupo" name="grupo">
+
+            <label for="turno">Turno</label>
+            <select id="turno" name="turno">
+                <option value="">Seleccione</option>
+                <option value="Matutino">Matutino</option>
+                <option value="Vespertino">Vespertino</option>
+                <option value="Nocturno">Nocturno</option>
+            </select>
+
+            <label for="estadoEquipo">Estado del Equipo</label>
+            <select id="estadoEquipo" name="estadoEquipo">
+                <option value="">Seleccione</option>
+                <option value="Buen estado">Buen estado</option>
+                <option value="Con fallas">Con fallas</option>
+                <option value="Fuera de servicio">Fuera de servicio</option>
+            </select>
+
+            <label for="estudiante">Estudiante que Informó</label>
+            <input type="text" id="estudiante" name="estudiante">
+
+            <label for="numeroEquipo">Número de Equipo</label>
+            <input type="number" id="numeroEquipo" name="numeroEquipo">
+
+            <button type="submit">Registrar</button>
+
+        </form>
+
+    </div>
+
+    <script>
+        window.onload = function() {
+
+            document.getElementById("laboratorio").value =
+                localStorage.getItem("laboratorio") || "";
+
+            document.getElementById("asignatura").value =
+                localStorage.getItem("asignatura") || "";
+
+            document.getElementById("fecha").value =
+                localStorage.getItem("fecha") || "";
+
+            document.getElementById("docente").value =
+                localStorage.getItem("docente") || "";
+
+            document.getElementById("horaSalida").value =
+                localStorage.getItem("horaSalida") || "";
+
+            document.getElementById("grupo").value =
+                localStorage.getItem("grupo") || "";
+
+            document.getElementById("turno").value =
+                localStorage.getItem("turno") || "";
+
+            document.getElementById("estadoEquipo").value =
+                localStorage.getItem("estadoEquipo") || "";
+
+            document.getElementById("estudiante").value =
+                localStorage.getItem("estudiante") || "";
+
+            document.getElementById("numeroEquipo").value =
+                localStorage.getItem("numeroEquipo") || "";
+        };
+    </script>
+
+</body>
+</html>
