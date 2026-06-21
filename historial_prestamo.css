@@ -1,0 +1,175 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+}
+
+/* BOTÓN VOLVER (MISMO ESTILO QUE PEDISTE) */
+.btn-volver{
+    position:fixed;
+    top:20px;
+    left:20px;
+    background:white;
+    color:#2563eb;
+    border:none;
+    padding:12px 22px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:all 0.25s ease;
+    text-decoration:none;
+}
+
+.btn-volver:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* CONTENEDOR */
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:90px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+    animation:fadeIn 0.4s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* TITULO */
+h1{
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:30px;
+    font-size:28px;
+}
+
+/* TABLA */
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+th{
+    background:#2563eb;
+    color:white;
+    padding:14px;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+}
+
+tr:hover td{
+    background:#f1f5f9;
+}
+
+/* INPUTS */
+input{
+    width:100%;
+    padding:8px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    outline:none;
+    transition:0.2s;
+}
+
+input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* MENSAJE VACÍO */
+#vacio{
+    text-align:center;
+    margin-top:20px;
+    color:#6b7280;
+    font-size:15px;
+}
+
+/* BOTÓN GUARDAR */
+.btn-guardar{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#22c55e;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn-guardar:hover{
+    background:#16a34a;
+    transform:translateY(-2px);
+}
+
+/* MENSAJE */
+#mensaje{
+    display:none;
+    margin-top:15px;
+    padding:10px;
+    background:#22c55e;
+    color:white;
+    text-align:center;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+/* 📱 RESPONSIVE CELULAR */
+@media (max-width:768px){
+
+    .container{
+        width:95%;
+        padding:20px;
+        margin:80px auto;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    .btn-volver{
+        top:10px;
+        left:10px;
+        padding:10px 18px;
+        font-size:14px;
+    }
+
+    table{
+        font-size:13px;
+    }
+
+    th, td{
+        padding:10px;
+    }
+}

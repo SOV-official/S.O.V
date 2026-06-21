@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Laboratorio</title>
     <link rel="stylesheet" href="protipo.css">
+    <link rel="icon" type="image/jpeg" href="utu.png">
 </head>
 
 <body>
+
+    <button onclick="window.location.href='menu.html'" class="btn-volver">
+        ← Volver al Menu
+    </button>
 
     <h1>Planilla de Registro de Laboratorio / Taller</h1>
 
@@ -100,9 +105,9 @@
         <section class="fila">
 
             <figure>
-                <figcaption>Número de Equipo</figcaption>
+                <figcaption>Números de Equipos</figcaption>
 
-                <input type="number" id="numeroEquipo" placeholder="Ingrese número de equipo">
+                <input type="text" id="numeroEquipo" placeholder="Ej: 12, 15, 18, 22, 30">
             </figure>
 
         </section>
@@ -115,6 +120,7 @@
 
     <script>
         function guardarDatos(event) {
+
             event.preventDefault();
 
             localStorage.setItem("laboratorio", document.getElementById("laboratorio").value);

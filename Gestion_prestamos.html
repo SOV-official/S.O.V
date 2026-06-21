@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Préstamo</title>
+<link rel="stylesheet" href="Gestion_prestamos.css">
+<link rel="icon" href="utu.png">
+</head>
+
+<body>
+
+<button onclick="window.location.href='menu.html'" class="btn-volver">
+    ← Volver al Menu
+</button>
+
+<div class="container">
+
+    <h1>Crear Préstamo</h1>
+
+    <form id="formPrestamo">
+
+        <label>Nombre del usuario</label>
+        <input type="text" id="usuario" required>
+
+        <label>Número de PC</label>
+        <input type="number" id="equipo" required>
+
+        <label>Fecha de préstamo</label>
+        <input type="date" id="fecha" required>
+
+        <!-- BOTÓN GUARDAR -->
+        <button type="submit" class="btn-guardar">
+            Guardar préstamo
+        </button>
+
+        <div id="mensaje">
+            ✔ Se guardó correctamente
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+
+document.getElementById("formPrestamo").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let usuario = document.getElementById("usuario").value.trim();
+    let equipo = document.getElementById("equipo").value.trim();
+    let fecha = document.getElementById("fecha").value;
+
+    if(usuario === "" || equipo === "" || fecha === ""){
+        alert("Complete todos los campos");
+        return;
+    }
+
+    let prestamos = JSON.parse(localStorage.getItem("prestamos")) || [];
+
+    prestamos.push({
+        usuario: usuario,
+        equipo: equipo,
+        fecha: fecha
+    });
+
+    localStorage.setItem("prestamos", JSON.stringify(prestamos));
+
+    let mensaje = document.getElementById("mensaje");
+    mensaje.style.display = "block";
+
+    this.reset();
+
+    setTimeout(() => {
+        mensaje.style.display = "none";
+        window.location.href = "menu.html";
+    }, 1500);
+
+});
+
+</script>
+
+</body>
+</html>
