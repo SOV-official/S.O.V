@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Servicio PC</title>
+ <link rel="icon" href="assets/img/utu.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/servicio.css">
+</head>
+
+<body>
+  <button onclick="window.location.href='menu.html'" class="btn-volver">
+        ← Volver al Menu
+    </button>
+    
+    <div class="container">
+
+        <h1>Solicitud de Servicio PC</h1>
+
+        <form id="formServicio">
+
+            <label>Nombre del profesor</label>
+            <input type="text" id="profesor" required>
+
+            <label>Materia</label>
+            <input type="text" id="materia" required>
+
+            <label>Fecha de solicitud</label>
+            <input type="date" id="fecha" required>
+
+            <label>Tipo de servicio</label>
+            <select id="tipo">
+                <option value="">Seleccione</option>
+                <option>Reparación</option>
+                <option>Mantenimiento</option>
+                <option>Instalación de software</option>
+                <option>Otro</option>
+            </select>
+
+            <label>Descripción del problema</label>
+            <textarea id="descripcion" placeholder="Describe lo que necesita la PC..." required></textarea>
+
+            <button type="submit">Enviar solicitud</button>
+
+            <div id="mensaje">
+                ✔ Solicitud enviada correctamente
+            </div>
+
+        </form>
+
+    </div>
+    <script src="assets/js/servicio.js"></script>
+</html>

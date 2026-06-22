@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Usuarios</title>
+<link rel="stylesheet" href="assets/css/gestion_usuario.css">
+<link rel="icon" href="assets/img/utu.png" type="image/png">
+
+</head>
+
+<body>
+<a href="menu.html" class="btn-volver">← Volver al menú</a>
+
+<div class="contenedor">
+
+    <h1>Gestión de Usuarios</h1>
+
+    <div class="campo">
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+    </div>
+
+    <div class="campo">
+        <label>Correo Electrónico</label>
+        <input type="email" id="correo">
+    </div>
+
+    <div class="campo">
+        <label>Contraseña</label>
+        <input type="password" id="password">
+    </div>
+
+    <button onclick="guardarUsuario()">Registrar Usuario</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaUsuarios"></tbody>
+    </table>
+
+</div>
+<script src="assets/js/gestion_usuarios.js"></script>
+</html>

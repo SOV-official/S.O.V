@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Préstamo</title>
+<link rel="stylesheet" href="assets/css/Gestion_prestamos.css">
+<link rel="icon" href="assets/img/utu.png" type="image/png">
+</head>
+
+<body>
+
+<button onclick="window.location.href='menu.html'" class="btn-volver">
+    ← Volver al Menu
+</button>
+
+<div class="container">
+
+    <h1>Crear Préstamo</h1>
+
+    <form id="formPrestamo">
+
+        <label>Nombre del usuario</label>
+        <input type="text" id="usuario" required>
+
+        <label>Número de PC</label>
+        <input type="number" id="equipo" required>
+
+        <label>Fecha de préstamo</label>
+        <input type="date" id="fecha" required>
+
+        <!-- Botoncito de guardado-->
+        <button type="submit" class="btn-guardar">
+            Guardar préstamo
+        </button>
+
+        <div id="mensaje">
+            ✔ Se guardó correctamente
+        </div>
+
+    </form>
+
+    <script src="assets/js/gestion_prestamos.js"></script>
+</div>
+
+<script>
